@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Nunito", sans-serif;
+}
+:root{
+    --white: #FFFFFF;
+    --light-grey: #D9D9D9;
+    --green: #4D774E;
+    --black: #141414;
+    --eerie-black: #1F1F1F;
+    --jet: #292929;
+}
+html{
+    font-size: 62.5%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--green) var(--eerie-black);
+}
+
+
+body{
+    background:var(--jet);
+    color:var(--white);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background:var(--jet);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.container-logo{
+    width: 4.5rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--green);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:var(--white)
+}
+#icono-menu{
+    font-size: 3.0rem;
+    color: var(--green);
+    display: none;
+}
+/* Main */
+
+/* Seccion Inicio */
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-content h3{
+   font-size: 3.2rem; 
+   font-weight: 700;
+}
+.inicio-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--green);
+}
+.inicio-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.inicio-img img{
+    width: 25vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+       }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.redes a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--green);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--green);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.redes a:hover{
+    background: var(--green);
+    color: var(--white);
+    box-shadow: 0 0 1 rem var(--green);
+
+}
+
+.btn{
+    display: inline-block;
+    background: var(--green);
+    border-radius: 3rem;
+    padding: .6rem 2rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.btn a{
+    color:var(--white);
+    font-size: 2 rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.btn:hover{
+    box-shadow: none;
+    background-color: #9DC88D;
+}
+
+/* Seccion Sobre Mi */
+
+.sobre-mi-content{
+    margin: 0 20px;
+}
+
+.sobre-mi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    background: var(--eerie-black);
+}
+.img-sobre-mi img{
+    width: 35vw;
+}
+
+.h2-sobre{
+    text-align: center;
+    font-size: 4.5rem;
+    
+}
+
+.sobre-mi-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+.sobre-mi-content h3 {
+    font-size: 2.6rem;
+}
+.sobre-mi-content p {
+    font-size: 2.0rem;
+    margin: 2rem 0 3rem;
+}
+/* Habilidades */
+
+.skills{
+    background-color: var(--jet);
+    width: 100%;
+    height: auto;
+}
+
+.skills h2{
+    margin: 2rem 0 3rem; 
+}
+.habilidades-content{
+    display: grid;
+    grid-template-columns: 14rem 14rem;
+    grid-template-rows: 15rem 15rem 15rem;
+    gap: 3rem;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+.habilidades{
+    background-color: var(--eerie-black);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 14rem;
+    height: 15rem;
+}
+.habilidades:hover {
+    background-color: var(--green); 
+    transform: scale(1.05); 
+}
+.habilidades p {
+    color: var(--white);
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+    margin-bottom: .7rem;
+}
+.habilidades:hover p {
+    color: var(--black);
+}
+
+/* Proyetos */
+.proyectos{
+background-color: var(--eerie-black);
+}
+
+.proyectos h2{
+    margin-bottom: 4rem;
+}
+
+.proyectos-content{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    align-items: start;
+    column-gap: 2.5rem;
+}
+.proyectos-content .proyecto-porta{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--green);
+    overflow: hidden;
+    display: flex;
+}
+
+.proyecto-porta img{
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+
+.proyecto-porta:hover img{
+    transform: scale(1.1);
+}
+
+.proyecto-porta .proyecto-l {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--green));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.proyecto-porta:hover .proyecto-l{
+    transform:translateY(0);
+}
+
+.proyecto-l h4{
+    font-size: 3rem;
+}
+
+.proyecto-l p {
+    font-size: 1.2rem;
+    margin: .3rem 0 1rem;
+}
+
+.proyecto-l a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:5rem;
+    height: 5rem;
+   
+}
+
+.proyecto-l a i{
+    font-size:2rem ;
+    color: var(--white);
+}
+/* Contactame */
+.contacto h2 {
+    margin-bottom: 3rem;
+}
+
+.contacto form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contacto form .input-contacto{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacto form .input-contacto input,
+.contacto form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size:1.6rem;
+    color:var(--white);
+    background: var(--green);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contacto form .input-contacto input{
+    width: 49%;
+}
+.contacto form textarea {
+    resize: none;
+}
+.contacto form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--eerie-black);
+}
+
+.footer-texto {
+    font-size: 1.6rem;
+}
+
+.footer-icono {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--green);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icono a:hover {
+    box-shadow: 0 0 1rem var(--white);
+}
+
+.footer-icono a i {
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 55%;
+   }
+    
+}
+    
+/* Celulares */
+@media screen and (max-width:767px){
+    #icono-menu{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top:100%;
+        left:0;
+        padding: 1rem 3%;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--black);
+        border-top:.1rem solid rgba(205, 238, 209, 0.2);
+        box-shadow: 0 .5rem 1rem rgba(205, 238, 209, 0.2);
+        display: none;
+
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar.active a {
+        display: block;
+        font-size: 2rem;
+        margin:3rem 0;
+    }
+    .inicio{
+        flex-direction: column;
+    }
+    .inicio-content h3{
+        font-size: 2.6rem;
+    }
+
+    .inicio-content h1{
+        font-size: 5rem;
+    }
+    .inicio-img img{
+        width:80vw;
+        margin-top: 8rem;
+    }
+    .sobre-mi{
+        flex-direction: column;
+    }
+    .sobre-mi-content h2, h3 {
+        text-align: center;
+
+    }
+    .sobre-mi img{
+        justify-content: center;
+        width:300px ;
+        height:auto;
+    }
+    .skills h2{
+        margin-bottom:3rem;
+    }
+    .proyectos h2{
+        margin-bottom: 3rem;
+    }
+    .proyectos-content {
+       grid-template-columns:1fr;
+       gap:15px;
+    }
+}
+
+
+    
